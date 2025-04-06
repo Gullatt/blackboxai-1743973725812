@@ -1,0 +1,14 @@
+<!-- logo.svg -->
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: 'Arial', sans-serif; font-size: 20px; fill: #00BFE5; font-weight: bold; }
+  </style>
+  <!-- Shield -->
+  <path d="M100 10 L170 40 V110 C170 145 140 180 100 190 C60 180 30 145 30 110 V40 L100 10 Z" stroke="#00BFE5" stroke-width="5" fill="none"/>
+  
+  <!-- X in the center -->
+  <text x="100" y="100" text-anchor="middle" alignment-baseline="middle" class="text" font-size="60">X</text>
+
+  <!-- Text below -->
+  <text x="100" y="170" text-anchor="middle" class="text">SENTINELX</text>
+</svg>
