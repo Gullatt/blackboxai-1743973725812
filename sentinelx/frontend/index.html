@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelX - AngelX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="main.js" defer></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header/Navigation -->
+        <header class="bg-blue-600 text-white shadow-lg">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="assets/logo.svg" alt="SentinelX Logo" class="h-8 w-8">
+                    <h1 class="text-xl font-bold">SentinelX</h1>
+                </div>
+                <nav class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-blue-700">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <div class="relative">
+                        <select id="language-selector" class="bg-blue-700 text-white px-3 py-1 rounded">
+                            <option value="pt-BR">🇧🇷 Português</option>
+                            <option value="en">🇬🇧 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                    <button id="auth-button" class="bg-blue-800 hover:bg-blue-900 px-4 py-2 rounded">
+                        <span data-i18n="login">Login</span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-2" data-i18n="welcome">Welcome to SentinelX</h2>
+                <p class="text-gray-600 dark:text-gray-300" data-i18n="slogan">Cyber innovation within everyone's reach</p>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Vulnerability Scanner Card -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="text-blue-600 dark:text-blue-400 mb-4">
+                        <i class="fas fa-shield-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white" data-i18n="vulnerabilityScan">Vulnerability Scanner</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n="scanDescription">Scan websites and devices for security vulnerabilities</p>
+                    <a href="scanner.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded" data-i18n="scanNow">Scan Now</a>
+                </div>
+
+                <!-- System Checkup Card -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="text-green-600 dark:text-green-400 mb-4">
+                        <i class="fas fa-heartbeat text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white" data-i18n="systemCheckup">System Checkup</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n="checkupDescription">Real-time analysis of your device's security status</p>
+                    <button class="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded" data-i18n="checkNow">Check Now</button>
+                </div>
+
+                <!-- Malware Analysis Card -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="text-red-600 dark:text-red-400 mb-4">
+                        <i class="fas fa-bug text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white" data-i18n="malwareAnalysis">Malware Analysis</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n="malwareDescription">Detect and analyze suspicious behavior</p>
+                    <button class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded" data-i18n="analyzeNow">Analyze Now</button>
+                </div>
+
+                <!-- Password Check Card -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="text-purple-600 dark:text-purple-400 mb-4">
+                        <i class="fas fa-key text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white" data-i18n="passwordCheck">Password Check</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n="passwordDescription">Check your passwords for weaknesses</p>
+                    <button class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded" data-i18n="checkPasswords">Check Now</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-6">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-gray-400" data-i18n="copyright">© 2023 AngelX - Cyber innovation within everyone's reach</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white" data-i18n="privacy">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white" data-i18n="terms">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white" data-i18n="contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
